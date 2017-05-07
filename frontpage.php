@@ -25,12 +25,8 @@ get_header(); ?>
 <nav class="sub-nav moduleTight hidden-xs">
 	<div class="container" style="width: 1000px;">
 		<div class="fb pull-right hidden-xs">
-			<a href="http://facebook.com/futurism" class="tagline">Building the future together</a>
-			<div class="fb-like" data-href="http://facebook.com/futurism" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
-			<a href="http://facebook.com/futurism" class="like-count">
-				<span>1000</span>
-				<em class="nub"><s></s><i></i></em>
-			</a>
+			<a href="http://facebook.com/newfuture" class="tagline">Building the future together</a>
+			<div class="fb-like" data-href="http://www.newfuture.website/" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
 		</div>
 		<div class="dropdown">
 			<h1 class="topstories"><i class="icon icon-arrow-down-c"></i> <span>Today's Top Stories</span></h1>
@@ -139,13 +135,11 @@ get_header(); ?>
 			<select data-placeholder="Predict " class="chosen prediction-dropdown" style="width: 150px;">
 			<option value=""></option>
 			<option value="2020s">2020s</option><option value="2030s">2030s</option><option value="2040s">2040s</option><option value="2050s">2050s</option><option value="2060s">2060s</option><option value="2070s">2070s</option><option value="2080s">2080s</option><option value="2090s">2090s</option><option value="2100+">2100+</option>		</select>
-		<!--
-<script>
+		<script>
 			if($('widow').width() <= 600){
 				$('.prediction-dropdown option[value=""]').text("Predict");
 			}
 		</script>
--->
 	</div>
 		</div>
 		<div class="post-response">

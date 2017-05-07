@@ -320,6 +320,7 @@
 	</div>
 </div>
 
+
 <!--
 <script>
 	jQuery( document ).ready( function( $ ) {
@@ -420,12 +421,10 @@
 		})();
 		</script>
 -->
-<!--
 <script type='text/javascript'>
 var colomatduration = 'fast';
 var colomatslideEffect = 'slideFade';
 </script>
--->
 <style>
 .heading {
 color: #3d9bd3;

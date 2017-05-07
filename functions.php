@@ -114,7 +114,7 @@ function apple_icons() {
 
 
 class MT_Walker_Nav_Menu extends Walker_Nav_Menu {
-  function start_lvl(&$output, $depth) {
+  function start_lvl(&$output, $depth = 0, $args = array()) {
     $indent = str_repeat("\t", $depth);
     $output .= "\n$indent<ul class=\"dropdown-menu\">\n";
   }
@@ -144,9 +144,6 @@ function mt_scripts() {
 	wp_enqueue_script( 'imagesloaded-js', get_template_directory_uri() . '/js/imagesloaded.min.js', array(), '20151215', false );
 	wp_enqueue_script( 'classie-js', get_template_directory_uri() . '/js/classie.js', array(), '20151215', false );
 	wp_enqueue_script( 'masonry-min-js', get_template_directory_uri() . '/js/masonry.min.js', array(), '20151215', false );
-	
-	
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -170,6 +167,18 @@ function getUrl() {
   $url .= $_SERVER["REQUEST_URI"];
   return $url;
 }
+
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+
+function special_nav_class ($classes, $item) {
+    if (in_array('current-menu-item', $classes) ){
+        $classes[] = 'active ';
+    }
+    return $classes;
+}
+
+
+
 /**
  * Implement the Custom Header feature.
  */

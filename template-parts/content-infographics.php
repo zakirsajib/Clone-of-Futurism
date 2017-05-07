@@ -34,14 +34,14 @@
 			$categories = get_categories($args);
 			
 			echo '<ul>';?>
-			<li><a class="active" href="<?php echo home_url();?>/infographics">Infographics</a></li>
+			<li><a href="<?php echo home_url();?>/infographics">Infographics</a></li>
 			<?php foreach ($categories as $category) {
 				$cat_slug = $category->slug;?>
 			    <li><a class="sub" href="<?php echo home_url();?>/infographics?cat=<?php echo $cat_slug?>"><?php echo $category->name; ?></a></li>
 			<?php
 			}?>
-			<li><a class="" href="<?php echo home_url();?>/this-week-in-science/">This Week in Science</a></li>
-			<li><a class="" href="<?php echo home_url();?>/facts-quotes/">Facts & Quotes</a></li>
+			<li><a href="<?php echo home_url();?>/this-week-in-science/">This Week in Science</a></li>
+			<li><a href="<?php echo home_url();?>/facts-quotes/">Facts & Quotes</a></li>
 			<?php echo '</ul>';
 		?>
 	</aside>
@@ -95,7 +95,7 @@
 							
 						<?php endwhile;
 					else :
-						echo 'No Images posts found!';
+						echo 'No posts were found!';
 					endif; wp_reset_query()?>
 					
 					<?php elseif($last_part):
@@ -132,7 +132,7 @@
 							
 						<?php endwhile;
 					else :
-						echo 'No Images posts found!';
+						echo 'No posts were found!';
 					endif; wp_reset_query()?>
 					
 					<?php endif;?>
@@ -155,7 +155,7 @@
 
 <script>
 		$('.infographics a').addClass('is-active');
-	</script>
+</script>
 
 <script>
 	var $container = $('.cards-wrapper');
@@ -165,7 +165,7 @@
 	$(navSelector).hide();
 
 	$(function(){
-
+				
 		$container.infinitescroll({
 			errorCallback : function(response) {
 				if (response == 'done') {
@@ -246,5 +246,6 @@
 		console.log('resize');
 		$container.masonry('reloadItems');
 	});
-
+	
 </script>
+
