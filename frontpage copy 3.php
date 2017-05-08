@@ -34,8 +34,13 @@ get_header(); ?>
 	</div>
 </nav>
 			
-	<div class="container">		
-		<center>Google Adsense Code here</center>
+	<div class="container">
+		<!-- /1000710/F_1x1 -->
+		
+
+		<!-- /1000710/F_R_H1 -->
+		
+
 	</div>
 
 	<div class="daily">
@@ -45,11 +50,11 @@ get_header(); ?>
 				
 				
 				
-				<?php //get_template_part('inc/popular', 'posts')?>
+				<?php get_template_part('inc/popular', 'posts')?>
 
 				<!-- /1000710/F_R_H2 -->
 				
-				<?php //get_template_part('inc/anotherthree', 'posts')?>
+				<?php get_template_part('inc/anotherthree', 'posts')?>
 
 
 
@@ -103,7 +108,7 @@ get_header(); ?>
 
 
 
-<?php //get_template_part('inc/anothersix', 'posts')?>
+<?php get_template_part('inc/anothersix', 'posts')?>
 
 <div class="listing-infographic">
 	<div class="row">
@@ -144,10 +149,10 @@ get_header(); ?>
 
 
 
-<?php //get_template_part('inc/anotherthreemore', 'posts')?>
+<?php get_template_part('inc/anotherthreemore', 'posts')?>
 				
 		
-<?php //get_template_part('inc/homepage', 'buckets')?>
+<?php get_template_part('inc/homepage', 'buckets')?>
 
 
 
@@ -164,9 +169,9 @@ get_header(); ?>
 	<div class="listings-group">
 		<section class="section">
 			<div class="container">
-				<?php //get_template_part('inc/restofthe', 'posts')?>
+				<?php get_template_part('inc/restofthe', 'posts')?>
 				
-				<?php //the_posts_navigation();?>
+				<?php the_posts_navigation();?>
 			</div>
 		</section>
 	</div>

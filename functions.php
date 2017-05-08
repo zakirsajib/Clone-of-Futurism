@@ -178,6 +178,45 @@ function special_nav_class ($classes, $item) {
 }
 
 
+function wpb_postsbycategory($cat_id) {
+	$cat_id = $cat_id;
+	$the_query = new WP_Query( 
+			array( 'category__in' => array($cat_id), 
+			'posts_per_page' => 4 ) 
+	); 
+	
+	$post_count =1;
+	
+	if ( $the_query->have_posts() ):?>
+		<div class="bucket col-sm-4 module">
+			
+			<?php 
+			$cat_obj = get_category($cat_id);
+			$cat_slug = $cat_obj->slug;
+			$cat_slug = str_replace("-","", $cat_slug);?>
+			
+			
+			<h4><a class="<?php echo $cat_slug?>" href="<?php echo esc_url( get_category_link($cat_id)) ?>"><i class="icon icon-bucket-<?php echo $cat_slug?>"></i><b><?php echo get_the_category_by_ID($cat_id)?></a></b>
+			</h4>
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post();?>
+				
+				<?php if($post_count == 1):?>
+					<div class="buckets-post module-sm">
+						<a class="cover-bg " style="background-image: url(<?php the_post_thumbnail_url(); ?>);" href="<?php the_permalink()?>" title="<?php the_title()?>" data-wpex-post-id="">
+						<h3><?php the_title()?></h3>
+						</a>
+					</div>
+				<?php else:?>
+					<p class="small-link">
+						<a href="<?php the_permalink()?>"><?php the_title()?></a>
+					</p>
+				<?php endif; $post_count++;?>
+			<?php endwhile;?>
+		</div>		
+	<?php endif;
+		/* Restore original Post Data */
+		wp_reset_postdata();
+}
 
 /**
  * Implement the Custom Header feature.
